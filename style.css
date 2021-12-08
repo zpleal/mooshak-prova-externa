@@ -1,0 +1,55 @@
+
+body {
+    font-size: 200%;
+    background-color: antiquewhite;
+    color: navy;
+    cursor: crosshair;
+}
+
+#banner {
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px lightgray;
+}
+
+#roomsContainer {
+    display:flex;
+    justify-content: space-around;
+    margin-top: 5vh;
+}
+
+.column {
+    width: 30vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.room {
+    text-align: center;
+}
+
+input {
+    transform: scale(2);    
+}
+
+label {
+    position: relative;
+    left: 0.4em;
+    top: 0.1em;
+}
+
+input {
+    cursor: pointer;
+}
+
+#update {
+    text-align: center;
+    background-color: white;
+    height: 2em;
+    line-height: 2em;
+    border-radius: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px lightgray;
+}
