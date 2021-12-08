@@ -43,7 +43,6 @@ async function populate(roomIPs) {
     let column;
     let count = 0;
 
-
     openIPs = [];
     for(const room in roomIPs) {
         if ( count++ % (columnSize) == 0) {
@@ -71,10 +70,13 @@ async function populate(roomIPs) {
         checkbox.onchange = () => {
             if(checkbox.checked) {
                 console.log({room, status: "checked" });
-                openIPs.push(room);
+                roomIPs[room].forEach( (ip) => openIPs.push(ip));
+                
             }  else {
                 console.log({room, status: "unchecked" });
-                openIPs = openIPs.filter( v => v != room);
+                roomIPs[room].forEach( (ip) => {
+                    openIPs = openIPs.filter( v => v != ip);
+                });
             }
                 
         };
@@ -91,5 +93,5 @@ function gateKeeper(ips) {
 }
 
 function showRoomStatus(openIPs) {
-    
+
 }
