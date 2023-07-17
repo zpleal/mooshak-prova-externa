@@ -1,3 +1,18 @@
-<Files gatekeeper>
+AuthType Basic
+AuthName "Mosshak prova externa"
+AuthUserFile /home/zp/public_html/mooshak-prova-externa/.htpasswd
+#Require valid-user
+
+<Files gatekeeper.cgi>
 SetHandler cgi-script
 </Files>
+
+<Files meu-ip.cgi>
+SetHandler cgi-script
+</Files>
+
+<Files remote_addr.cgi>
+SetHandler cgi-script
+</Files>
+
+

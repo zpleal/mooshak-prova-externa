@@ -10,6 +10,7 @@ body {
     text-align: center;
     font-weight: bold;
     text-shadow: 3px 3px 3px lightgray;
+    margin-top: 10vh;
 }
 
 #roomsContainer {
@@ -20,13 +21,26 @@ body {
 
 .column {
     width: 30vw;
-    height: 70vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
 }
 
 .room {
     text-align: center;
+}
+
+.current {
+   font-weight: bold;
+   color: orange;
+}
+
+.all {
+    color: green;
+}
+
+.some {
+    color: yellow;
 }
 
 input {
@@ -52,4 +66,17 @@ input {
     font-weight: bold;
     cursor: pointer;
     box-shadow: 5px 5px 5px lightgray;
+}
+
+#status {
+    text-align: center;
+    padding: 1em;
+}
+
+#status.OK {
+    color: green;
+}
+
+#status.KO {
+    color: red;
 }

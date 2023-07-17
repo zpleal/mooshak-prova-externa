@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu IP</title>
+	<script>
+	  window.onload = () => {
+	      const ipLabel = document.getElementById('ip');
+
+	      fetch('meu-ip.cgi')
+		  .then(res => res.json())
+	          .then(ans => {
+		      ipLabel.innerText = ans.ip;
+		  })
+	          .catch(console.log);
+	      
+	  }
+	</script>
+	<style>
+	  body {
+	      background: lightGrey;
+	  }
+	  .panel {
+	      background: white;
+	      width: 80%;
+	      margin: auto;
+	      margin-top: 2em;
+	      text-align: center;
+	      font-size: xx-large;
+	      padding: 2em;
+	  }
+	  #ip {
+	      font-weight: bold;
+	  }
+	</style>
+    </head>
+    <body>
+      <div class=panel>
+	O meu IP é <span id="ip"></span>
+      </div>
+    </body>
+</html>
